@@ -8,6 +8,37 @@ website:
       - href: index.qmd
         text: Home
       - about.qmd
+    tools:
+      - icon: twitter
+        href: https://twitter.com
+      - icon: github
+        menu:
+          - text: Source Code
+            href:  https://code.com
+          - text: Report a Bug
+            href:  https://bugs.com
+  sidebar:
+    style: "docked"
+    search: true
+    contents:
+      - text: "Introduction"
+        href: 1_Introduction.qmd
+      - section: "Documentation"
+        href: 2_Documentation.qmd
+        contents:
+          - index.qmd
+          - basics-knitr.qmd
+          - basics-jupyter.qmd
+      - section: "Docs"
+        contents:
+          - 2_Documentation.qmd
+          #- layout-knitr.qmd
+          #- layout-jupyter.qmd
+      #- section: advanced.qmd
+      #  contents:
+      #    - raw-code.qmd
+      #    - custom-theme.qmd
+      #- acknowlegment.qmd
 
 format:
   html:
