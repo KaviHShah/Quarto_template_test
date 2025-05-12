@@ -17,5 +17,29 @@
       "Documentation",
       "my-website"
     ]
+  },
+  {
+    "objectID": "index.html#overview",
+    "href": "index.html#overview",
+    "title": "my-website",
+    "section": "Overview",
+    "text": "Overview\nThis course is designed to equip all members of the Part III Systems Biology cohort at the University of Cambridge with a foundational understanding of Python. This will be utilised in various subsequent sections of the programme. While no prior knowledge of Python is required, basic familiarity with coding is assumed. Additionally, this course may serve as a valuable introduction for those interested in learning Python for data science, particularly for those working with biological data.\n\n\n\n\n\n\nAims\n\n\n\n\nMy aims are to…\n\n\n\n\nTarget Audience\n\n\nPrerequisites\n\nHave some prior experience in coding, whether in Python or another programming language.\n\n\n\n\nExercises",
+    "crumbs": [
+      "Home",
+      "Documentation",
+      "my-website"
+    ]
+  },
+  {
+    "objectID": "index.html#citation",
+    "href": "index.html#citation",
+    "title": "my-website",
+    "section": "Citation",
+    "text": "Citation",
+    "crumbs": [
+      "Home",
+      "Documentation",
+      "my-website"
+    ]
   }
 ]
