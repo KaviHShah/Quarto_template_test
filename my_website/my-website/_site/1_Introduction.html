@@ -204,6 +204,7 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
   <li><a href="#overview" id="toc-overview" class="nav-link" data-scroll-target="#overview">Overview</a></li>
+  <li><a href="#test-2" id="toc-test-2" class="nav-link" data-scroll-target="#test-2">Test 2</a></li>
   </ul>
 </nav>
     </div>
@@ -244,6 +245,39 @@ ul.task-list li input[type="checkbox"] {
   B --&gt; C{Decision}
   C --&gt;|Yes| D[Continue]
   C --&gt;|No| E[Stop]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</section>
+<section id="test-2" class="level2">
+<h2 class="anchored" data-anchor-id="test-2">Test 2</h2>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">architecture-beta
+    group local-network(internet)[local-network]
+    group network-management()[netwok-mangement] in local-network
+    group messaging-control()[messaging-control] in local-network
+    group data-collection-and-display()[data-collection-and-display] in local-network
+    service Esp32n1 in local-network
+    service Esp32n2 in local-network
+    service Esp32n3 in local-network
+    service dnsmasq()[dnsmasq] in network-management
+    service hostapd()[hostapd] in network-management
+    service freeradius()[freeradius] in network-management
+    service mosquitto-broker()[mosquitto-broker] in messaging-control
+    service telegraf()[telegraf] in data-collection-and-display
+    service influxdb()[influxdb] in data-collection-and-display
+
+    hostapd:T &lt;--&gt; B:freeradius
+    hostapd:T -- B:freeradius
+    telegraf:T -- B:influxdb
+    mosquitto-broker:L -- R:telegraf
 </pre>
 </div>
 <p></p></figure><p></p>

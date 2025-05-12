@@ -14,3 +14,27 @@ graph TD
   C -->|Yes| D[Continue]
   C -->|No| E[Stop]
 ```
+
+## Test 2
+
+```{mermaid}
+architecture-beta
+    group local-network(internet)[local-network]
+    group network-management()[netwok-mangement] in local-network
+    group messaging-control()[messaging-control] in local-network
+    group data-collection-and-display()[data-collection-and-display] in local-network
+    service Esp32n1 in local-network
+    service Esp32n2 in local-network
+    service Esp32n3 in local-network
+    service dnsmasq()[dnsmasq] in network-management
+    service hostapd()[hostapd] in network-management
+    service freeradius()[freeradius] in network-management
+    service mosquitto-broker()[mosquitto-broker] in messaging-control
+    service telegraf()[telegraf] in data-collection-and-display
+    service influxdb()[influxdb] in data-collection-and-display
+
+    hostapd:T <--> B:freeradius
+    hostapd:T -- B:freeradius
+    telegraf:T -- B:influxdb
+    mosquitto-broker:L -- R:telegraf
+```    

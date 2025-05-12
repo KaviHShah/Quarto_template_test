@@ -18,6 +18,17 @@
     ]
   },
   {
+    "objectID": "1_Introduction.html#test-2",
+    "href": "1_Introduction.html#test-2",
+    "title": "Introduction",
+    "section": "Test 2",
+    "text": "Test 2\n\n\n\n\n\narchitecture-beta\n    group local-network(internet)[local-network]\n    group network-management()[netwok-mangement] in local-network\n    group messaging-control()[messaging-control] in local-network\n    group data-collection-and-display()[data-collection-and-display] in local-network\n    service Esp32n1 in local-network\n    service Esp32n2 in local-network\n    service Esp32n3 in local-network\n    service dnsmasq()[dnsmasq] in network-management\n    service hostapd()[hostapd] in network-management\n    service freeradius()[freeradius] in network-management\n    service mosquitto-broker()[mosquitto-broker] in messaging-control\n    service telegraf()[telegraf] in data-collection-and-display\n    service influxdb()[influxdb] in data-collection-and-display\n\n    hostapd:T &lt;--&gt; B:freeradius\n    hostapd:T -- B:freeradius\n    telegraf:T -- B:influxdb\n    mosquitto-broker:L -- R:telegraf",
+    "crumbs": [
+      "Home",
+      "Introduction"
+    ]
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "my-website",
